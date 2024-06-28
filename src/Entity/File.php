@@ -32,8 +32,7 @@ use App\State\GetCollectionFileProvider;
             uriTemplate: '/files', 
             controller: CreateFileController::class
         ), 
-        new Delete(security: "object == user",
-             securityMessage: 'Удалять можно только себя'),
+        new Delete(),
     ]
 )]
 #[ORM\Entity(repositoryClass: FileRepository::class)]
